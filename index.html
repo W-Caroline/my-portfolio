@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">CAROLINE</div>
+            <div class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#skills" class="nav-item">Skills</a></li>
+                <li><a href="#interests" class="nav-item">Interests</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="section-content">
+        <div class="main-container">
+            <div class="image">
+                <img src="images/caroline.jpg" alt="Caroline's Image">
+            </div>
+            <div class="content">
+                <h1>Hi, I'm <span>Caroline</span></h1>
+                <p>Welcome to my portfolio. I am a passionate Software Development student at Power Learn Project. My background in Customer Service and Virtual Assistance helps me understand the importance of clear communication and problem-solving, skills I apply in my coding journey.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="btn">
+                    <a href="CarolineW_CV.pdf" download aria-label="Download CV"><button>Download CV</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-content">
+        <h2>About Me</h2>
+        <p>I am currently studying software development at Power Learn Project, working hard to build a solid foundation in programming. With experience in customer service and as a virtual assistant, I’ve honed my communication and organizational skills. I’m committed to continuous learning, and my goal is to create solutions that make a difference.</p>
+    </section>
+
+    <section id="skills" class="section-content">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, JavaScript, HTML, CSS</li>
+            <li><strong>Tools:</strong> Visual Studio Code, MySQL, GitHub</li>
+            <li><strong>Frameworks:</strong> React, Node.js (still learning)</li>
+            <li><strong>Soft Skills:</strong> Communication, Problem-solving, Attention to Detail</li>
+        </ul>
+    </section>
+
+    <section id="interests" class="section-content">
+        <h2>Interests</h2>
+        <p>I am passionate about creating user-friendly interfaces and building applications that solve real-world problems. Outside of coding, I enjoy exploring new tech trends, reading, and traveling to experience different cultures.</p>
+    </section>
+
+    <section id="projects" class="section-content">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Personal Portfolio Website:</strong> Built using HTML, CSS, and JavaScript, showcasing my skills and achievements.</li>
+            <li><strong>Task Management App:</strong> A simple calculator created with Python.</li>
+            <li><strong>Customer Support System:</strong> A simulated project from my virtual assistant experience where I integrated chat support features to improve customer interaction.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section-content">
+        <h2>Contact Me</h2>
+        <form action="#" method="post" class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+            });
+
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
